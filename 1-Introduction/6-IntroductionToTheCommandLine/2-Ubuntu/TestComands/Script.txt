@@ -1,0 +1,16 @@
+Lets practicing some frecuently commands
+
+name="Eduardo"
+echo "My name is: $name"
+
+a=5
+b=2
+c=$((a + b)) or c=$[a + b]
+echo $c
+
+
+for i in {1..5}; do touch NewDocument$i.css; done
+
+
+
+

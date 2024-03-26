@@ -1,0 +1,8 @@
+- Compila tu código C++ a código ensamblador: 
+	g++ -S -o helloWorld.s helloWorld.cpp
+- Una vez que tengas el archivo de código ensamblador (output.s), puedes ensamblarlo utilizando as: 
+	as -o helloWorld.o helloWorld.s
+- Para enlazar el archivo objeto y crear un ejecutable, puedes usar el comando ld (linker) o simplemente puedes usar g++ para manejar la etapa de compilación como la de enlace
+	g++ -o helloWorld helloWorld.o
+- Ejecuta tu aplicacion
+	./helloWorld

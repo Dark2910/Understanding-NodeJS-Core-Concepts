@@ -1,0 +1,4 @@
+- Compila tu codigo:
+	g++ helloWorld.cpp -o helloWorld
+- Ejecuta tu programa
+	./helloWorld

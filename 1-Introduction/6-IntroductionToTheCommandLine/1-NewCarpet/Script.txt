@@ -1,0 +1,18 @@
+for($i=0; $i -lt 9; $i++){echo $null > NewDocument$i.txt}
+
+mv .\Docs\Script.txt .\
+
+mkdir Styles
+
+mv *.css .\Styles\
+
+
+variable: $name=Vans, $animal=birth
+editor: nano, vim
+showContent: cat
+documentation: man
+createCarpet: mkdir
+createItem: echo $null > Hello.txt or New-Item Hello.txt
+basicCommads: mv rm
+
+
