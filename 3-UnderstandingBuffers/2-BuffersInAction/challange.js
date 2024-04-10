@@ -39,3 +39,7 @@ const myBuffer1 = Buffer.from('Lalo. :D', 'utf-8');
 console.log(myBuffer1);
 console.log(myBuffer1.toString('utf-8'));
 
+const symblBuffer = Buffer.from('F09FAAB2', 'hex');
+console.log(symblBuffer.toString('utf-8'));
+
+
