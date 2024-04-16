@@ -18,7 +18,7 @@ const createFile = async (path, content) => {
     }
 }
 
-const path = './new_File.txt';
+const path = './new_file.txt';
 const content = '';
 
 createFile(path, content);
