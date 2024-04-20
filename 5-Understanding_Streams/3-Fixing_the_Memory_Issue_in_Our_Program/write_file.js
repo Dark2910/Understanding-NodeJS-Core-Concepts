@@ -7,27 +7,6 @@ const { Buffer } = require('node:buffer');
         const fileHandle = await fs.open(path, 'w');
         const stream = fileHandle.createWriteStream();
         
-        for(let i = 1; i <= 1000000; i++) {
-            const buff = Buffer.from(`${i} `, 'utf-8');
-            stream.write(buff);
-        }
-        console.timeEnd('Time');
-    } catch (error) {
-        console.error(error);
-    }
-}
-
-const path2 = './test.txt';
-writeFile2(path2); */
-
-/////////////////////////////////////////////////////////////////////////////////
-
-/* const writeFile2 = async (path) => {
-    try {
-        console.time('Time');
-        const fileHandle = await fs.open(path, 'w');
-        const stream = fileHandle.createWriteStream();
-        
         console.log(stream.writableHighWaterMark); //stream default size
         console.log(stream.writable);  //is the stream safe to write?
         console.log(stream.writableLength);
@@ -57,49 +36,46 @@ writeFile2(path2); */
     }
 }
 const path = './test.txt';
-writeFile2(path);
+writeFile2(path); */
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * 
+ * @param {string} path 
+ * @param {number} numberOfWrites 
+ * @param {number} numberToStart 
  */
-
-const writeFile2 = async (path) => {
+const writeFile = async (path, numberOfWrites, numberToStart) => {
     try {
-        console.time('Time');
-
+        console.time('Timer');
         const fileHandle = await fs.open(path, 'w');
-        const stream = fileHandle.createWriteStream();
+        const writeStream = fileHandle.createWriteStream({highWaterMark: Math.pow(2, 20)});
 
-        let i = 1;
-        const numberOfWrites = 1000000;
+        let i = numberToStart;
 
-        const writeMany = () => {
-            while( i <= numberOfWrites ) {
-                const buff = Buffer.from(`${i} `, "utf-8");
+        while (i <= numberOfWrites) {
+            const buff = Buffer.from(`${i} `, "utf-8");
 
-                if(i === numberOfWrites) {
-                    return stream.end(buff);
-                }
+            if (!writeStream.write(buff)) {
+                await new Promise((resolve) => writeStream.once('drain', resolve));
+            };
 
-                if(!stream.write(buff)) {
-                    break;
-                }
+            i++;
+        };
 
-                i++;
-            }
-        }
+        writeStream.end();
 
-        writeMany();
-
-        stream.on('drain', () => {
-            writeMany();
-        });
-
-        stream.on('finish', () => {
+        writeStream.on('finish', () => {
             fileHandle.close();
-            console.timeEnd('Time');
+            console.timeEnd('Timer');
         });
-        
-    } catch (error) {
-        console.error(error);
+    } catch (err) {
+        console.error(err);
     }
-}
+};
+
 const path = './test.txt';
-writeFile2(path);
+const numberOfWrites = 1e6;
+const numberToStart = 1;
+writeFile(path, numberOfWrites, numberToStart);
