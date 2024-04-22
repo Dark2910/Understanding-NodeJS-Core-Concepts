@@ -1,0 +1,100 @@
+<mxfile host="65bd71144e">
+    <diagram id="uE9PJEBGewlUo7mxGhDY" name="Page-1">
+        <mxGraphModel dx="983" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="5" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;div style=&quot;color: rgb(221, 221, 221); background-color: rgb(31, 31, 31); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;color: #66d9ef;font-style: italic;&quot;&gt;const&lt;/span&gt; &lt;span style=&quot;color: #a6e22e;&quot;&gt;readFile&lt;/span&gt; &lt;span style=&quot;color: #f92672;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #f92672;&quot;&gt;async&lt;/span&gt; (&lt;span style=&quot;color: #fd971f;font-style: italic;&quot;&gt;src&lt;/span&gt;, &lt;span style=&quot;color: #fd971f;font-style: italic;&quot;&gt;des&lt;/span&gt;) &lt;span style=&quot;color: #66d9ef;font-style: italic;&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="130.5" y="40" width="300" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="4" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="4" target="9">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="383" y="215" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="&lt;div style=&quot;color: rgb(221, 221, 221); background-color: rgb(31, 31, 31); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;color: #f92672;&quot;&gt;try&lt;/span&gt; {&lt;span style=&quot;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(221, 221, 221); background-color: rgb(31, 31, 31); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;color: rgb(249, 38, 114);&quot;&gt;catch&lt;/span&gt;&lt;span style=&quot;&quot;&gt; (&lt;/span&gt;&lt;span style=&quot;color: rgb(248, 248, 242);&quot;&gt;err&lt;/span&gt;&lt;span style=&quot;&quot;&gt;) {}&lt;/span&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="203" y="150" width="155" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; color: rgb(248, 248, 242);&quot;&gt;console&lt;/span&gt;&lt;span style=&quot;color: rgb(221, 221, 221); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; background-color: rgb(31, 31, 31);&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; color: rgb(166, 226, 46);&quot;&gt;error&lt;/span&gt;&lt;span style=&quot;color: rgb(221, 221, 221); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; background-color: rgb(31, 31, 31);&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; color: rgb(248, 248, 242);&quot;&gt;err&lt;/span&gt;&lt;span style=&quot;color: rgb(221, 221, 221); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; background-color: rgb(31, 31, 31);&quot;&gt;);&lt;/span&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+                    <mxGeometry x="13" y="185" width="180.5" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="9" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;div style=&quot;color: rgb(221, 221, 221); background-color: rgb(31, 31, 31); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;color: #66d9ef;font-style: italic;&quot;&gt;const&lt;/span&gt; &lt;span style=&quot;color: #f8f8f2;&quot;&gt;fileHandleRead&lt;/span&gt; &lt;span style=&quot;color: #f92672;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #f92672;&quot;&gt;await&lt;/span&gt; &lt;span style=&quot;color: #f8f8f2;&quot;&gt;fs&lt;/span&gt;.&lt;span style=&quot;color: #a6e22e;&quot;&gt;open&lt;/span&gt;(&lt;span style=&quot;color: #f8f8f2;&quot;&gt;src&lt;/span&gt;, &lt;span style=&quot;color: #e6db74;&quot;&gt;'r'&lt;/span&gt;);&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="378" y="185" width="380" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="13">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="568" y="340" as="sourcePoint"/>
+                        <mxPoint x="628" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="&lt;div style=&quot;color: rgb(221, 221, 221); background-color: rgb(31, 31, 31); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;color: #66d9ef;font-style: italic;&quot;&gt;const&lt;/span&gt; &lt;span style=&quot;color: #f8f8f2;&quot;&gt;fileHandleWrite&lt;/span&gt; &lt;span style=&quot;color: #f92672;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #f92672;&quot;&gt;await&lt;/span&gt; &lt;span style=&quot;color: #f8f8f2;&quot;&gt;fs&lt;/span&gt;.&lt;span style=&quot;color: #a6e22e;&quot;&gt;open&lt;/span&gt;(&lt;span style=&quot;color: #f8f8f2;&quot;&gt;des&lt;/span&gt;, &lt;span style=&quot;color: #e6db74;&quot;&gt;'w'&lt;/span&gt;);&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="373" y="270" width="390" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="13" target="15">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;div style=&quot;color: rgb(221, 221, 221); background-color: rgb(31, 31, 31); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&amp;nbsp;&lt;span style=&quot;color: #66d9ef;font-style: italic;&quot;&gt;const&lt;/span&gt; &lt;span style=&quot;color: #f8f8f2;&quot;&gt;streamRead&lt;/span&gt; &lt;span style=&quot;color: #f92672;&quot;&gt;=&lt;/span&gt;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;color: rgb(221, 221, 221); background-color: rgb(31, 31, 31); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;color: #f8f8f2;&quot;&gt;fileHandleRead&lt;/span&gt;.&lt;span style=&quot;color: #a6e22e;&quot;&gt;createReadStream&lt;/span&gt;({highWaterMark: &lt;span style=&quot;color: #f8f8f2;&quot;&gt;Math&lt;/span&gt;.&lt;span style=&quot;color: #a6e22e;&quot;&gt;pow&lt;/span&gt;(&lt;span style=&quot;color: #ae81ff;&quot;&gt;2&lt;/span&gt;, &lt;span style=&quot;color: #ae81ff;&quot;&gt;20&lt;/span&gt;)});&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="308" y="380" width="520" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="15" target="21">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;div style=&quot;color: rgb(221, 221, 221); background-color: rgb(31, 31, 31); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;color: #66d9ef;font-style: italic;&quot;&gt;const&lt;/span&gt; &lt;span style=&quot;color: #f8f8f2;&quot;&gt;streamWrite&lt;/span&gt; &lt;span style=&quot;color: #f92672;&quot;&gt;=&lt;/span&gt;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;color: rgb(221, 221, 221); background-color: rgb(31, 31, 31); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;color: #f8f8f2;&quot;&gt;fileHandleWrite&lt;/span&gt;.&lt;span style=&quot;color: #a6e22e;&quot;&gt;createWriteStream&lt;/span&gt;({highWaterMark: &lt;span style=&quot;color: #f8f8f2;&quot;&gt;Math&lt;/span&gt;.&lt;span style=&quot;color: #a6e22e;&quot;&gt;pow&lt;/span&gt;(&lt;span style=&quot;color: #ae81ff;&quot;&gt;2&lt;/span&gt;, &lt;span style=&quot;color: #ae81ff;&quot;&gt;20&lt;/span&gt;)});&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="298" y="460" width="540" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="21" target="23">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; color: rgb(248, 248, 242);&quot;&gt;streamRead&lt;/span&gt;&lt;span style=&quot;color: rgb(221, 221, 221); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; background-color: rgb(31, 31, 31);&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; color: rgb(166, 226, 46);&quot;&gt;on&lt;/span&gt;&lt;span style=&quot;color: rgb(221, 221, 221); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; background-color: rgb(31, 31, 31);&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; color: rgb(230, 219, 116);&quot;&gt;'data'&lt;/span&gt;&lt;span style=&quot;color: rgb(221, 221, 221); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; background-color: rgb(31, 31, 31);&quot;&gt;, (&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; color: rgb(253, 151, 31); font-style: italic;&quot;&gt;chunk&lt;/span&gt;&lt;span style=&quot;color: rgb(221, 221, 221); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; background-color: rgb(31, 31, 31);&quot;&gt;)&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; color: rgb(102, 217, 239); font-style: italic;&quot;&gt;=&amp;gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="439" y="570" width="258" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="23" target="25">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="23" target="23">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="770" y="660" as="targetPoint"/>
+                        <mxPoint x="780" y="840" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="800" y="720"/>
+                            <mxPoint x="700" y="665"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="&lt;div style=&quot;color: rgb(221, 221, 221); background-color: rgb(31, 31, 31); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;color: #f8f8f2;&quot;&gt;streamWrite&lt;/span&gt;.&lt;span style=&quot;color: #a6e22e;&quot;&gt;write&lt;/span&gt;(&lt;span style=&quot;color: #f8f8f2;&quot;&gt;chunk&lt;/span&gt;)&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="456.5" y="665" width="223" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="25" target="29">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="&lt;div style=&quot;color: rgb(221, 221, 221); background-color: rgb(31, 31, 31); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;color: #f8f8f2;&quot;&gt;streamRead&lt;/span&gt;.&lt;span style=&quot;color: #a6e22e;&quot;&gt;pause&lt;/span&gt;();&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="269" y="695" width="156" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="29" target="31">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="&lt;div style=&quot;color: rgb(221, 221, 221); background-color: rgb(31, 31, 31); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;color: #f8f8f2;&quot;&gt;streamWrite&lt;/span&gt;.&lt;span style=&quot;color: #a6e22e;&quot;&gt;on&lt;/span&gt;(&lt;span style=&quot;color: #e6db74;&quot;&gt;'drain'&lt;/span&gt;, () &lt;span style=&quot;color: #66d9ef;font-style: italic;&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="230.5" y="785" width="233" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="31" target="33">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="&lt;div style=&quot;color: rgb(221, 221, 221); background-color: rgb(31, 31, 31); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;color: #f8f8f2;&quot;&gt;streamRead&lt;/span&gt;.&lt;span style=&quot;color: #a6e22e;&quot;&gt;resume&lt;/span&gt;();&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="265.5" y="880" width="163" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="270.5" y="970" width="153" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
