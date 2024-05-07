@@ -15,26 +15,24 @@ const fs = require('node:fs/promises');
     try {
         console.time('Copy');
         
-        const destFile = await fs.open('./text.txt', 'w');
         const srcFile = await fs.open('../numbers.txt', 'r');
+        const destFile = await fs.open('./text.txt', 'w');
         
         let bytesRead = -1;
-        
+
         while(bytesRead !== 0) {
             const readResult = await srcFile.read();
+            let buff = readResult.buffer;
             bytesRead = readResult.bytesRead;
-            
 
             if(bytesRead !== 16384) {
                 const indexOfNotFilled = readResult.buffer.indexOf(0);
-                const newBuff = Buffer.alloc(indexOfNotFilled);
+                buff = Buffer.alloc(indexOfNotFilled);
 
-                readResult.buffer.copy(newBuff, 0, 0, indexOfNotFilled);
-
-                destFile.write(newBuff);
-            } else {
-                destFile.write(readResult.buffer);
+                readResult.buffer.copy(buff, 0, 0, indexOfNotFilled);
             }
+            
+            await destFile.write(buff);
         }
 
         console.timeEnd('Copy');
