@@ -55,12 +55,55 @@ class MyWriteable extends Writable {
         });
     }
 
-    _destroy(){
-
+    _destroy(error, callback){
+        console.log("Numbers of writes:", this.writesCount);
+        if(this.fd){
+            fs.close(this.fd, (err) => callback(err || error));
+        } else {
+            callback(error);
+        }
     }
 }
 
-const stream = new MyWriteable({highWaterMark: Math.pow(2, 20), filename: './test.txt'})
+// const stream = new MyWriteable({highWaterMark: Math.pow(2, 20), filename: './test.txt'})
 
-stream.write(Buffer.from('Hello World!!! :D'));
-stream.end(Buffer.from('Hello my friend. :D'));
+// stream.write(Buffer.from('Hello World!!! :D'));
+// stream.end(Buffer.from('Hello my friend. :D'));
+
+/** */
+
+const writeFile = async (path, numberOfWrites, numberToStart) => {
+    try {
+        console.time('Timer');
+        //const fileHandle = await fs.open(path, 'w');
+        //const writeStream = fileHandle.createWriteStream({highWaterMark: Math.pow(2, 20)});
+
+        const writeStream = new MyWriteable({highWaterMark: Math.pow(2,20), filename: path})
+        
+        let i = numberToStart;
+
+        while (i <= numberOfWrites) {
+            const buff = Buffer.from(`${i} `, "utf-8");
+
+            if (!writeStream.write(buff)) {
+                await new Promise((resolve) => writeStream.once('drain', resolve));
+            };
+
+            i++;
+        };
+
+        writeStream.end();
+
+        writeStream.on('finish', () => {
+            // fileHandle.close();
+            console.timeEnd('Timer');
+        });
+    } catch (err) {
+        console.error(err);
+    }
+};
+
+const path = './test.txt';
+const numberOfWrites = 1e6;
+const numberToStart = 1;
+writeFile(path, numberOfWrites, numberToStart);
