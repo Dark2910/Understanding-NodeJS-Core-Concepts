@@ -7,13 +7,19 @@ const HOSTNAME = '::1';
 const socket = net.createConnection(PORT, HOSTNAME, async () => {
     const filePath = './text.txt';
     const fileHandle = await fs.open(filePath, 'r');
-    const fileStream = fileHandle.createReadStream({highWaterMark: Math.pow(2, 20)});
+    const fileReadStream = fileHandle.createReadStream({highWaterMark: Math.pow(2, 20)});
 
-    fileStream.on('data', (data) => {
-        socket.write(data);
+    fileReadStream.on('data', (data) => {
+        if(!socket.write(data)){
+            fileReadStream.pause();
+        }
     });
 
-    fileStream.on('end', () => {
+    socket.on('drain', () => {
+        fileReadStream.resume();
+    });
+
+    fileReadStream.on('end', () => {
         console.log('The file was successfully uploaded!');
         socket.end();
     });
