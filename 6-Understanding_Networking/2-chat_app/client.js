@@ -2,7 +2,8 @@ const net = require("node:net" );
 const readline  = require("node:readline/promises")
 
 const PORT = 3008;
-const HOSTNAME = '127.0.0.1';
+//const HOSTNAME = '127.0.0.1';
+const HOSTNAME = '3.145.99.116';
 
 const rl = readline.createInterface({
     input: process.stdin,
