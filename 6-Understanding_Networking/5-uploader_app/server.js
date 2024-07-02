@@ -14,11 +14,15 @@ server.on('connection', (socket) => {
     socket.on('data', async (data) => {
         if(!fileHandle) {
             socket.pause();
-            fileHandle = await fs.open('./NewCarpet/test.txt', 'w');
+
+            const indexOfDivider = data.indexOf('---');
+            const fileName = data.subarray(10, indexOfDivider).toString('utf-8');
+
+            fileHandle = await fs.open(`./NewCarpet/${fileName}`, 'w');
             fileWriteStream = fileHandle.createWriteStream({highWaterMark: Math.pow(2, 20)});
 
             //Writing to out destination file.
-            fileWriteStream.write(data);
+            fileWriteStream.write(data.subarray(indexOfDivider + 3));
             socket.resume();
 
             fileWriteStream.on('drain', () => {
@@ -32,7 +36,7 @@ server.on('connection', (socket) => {
     });
 
     socket.on('end', () => {
-        fileHandle.close();
+        if(fileHandle) fileHandle.close();
         fileHandle = undefined;
         fileWriteStream = undefined;
         console.log('Connection ended.');
