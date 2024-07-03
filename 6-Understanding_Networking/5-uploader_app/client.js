@@ -3,7 +3,8 @@ const fs = require('node:fs/promises');
 const path = require('node:path');
 
 const PORT = 5050;
-const HOSTNAME = '::1';
+const HOSTNAME = '3.129.207.108';
+//const HOSTNAME = '::1';
 
 const clearLine = (dir) => new Promise((resolve, reject) => {
     process.stdout.clearLine(dir, () => {

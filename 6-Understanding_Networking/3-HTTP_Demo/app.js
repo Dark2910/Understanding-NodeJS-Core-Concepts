@@ -1,7 +1,7 @@
 const http = require('node:http');
 
 const PORT = 4080;
-const HOSTNAME = '192.168.0.123';
+const HOSTNAME = '192.168.0.3';
 
 const server = http.createServer((req, res) => {
     const data = {message: 'Hi :D'};

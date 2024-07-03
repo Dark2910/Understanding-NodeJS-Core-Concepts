@@ -2,7 +2,8 @@ const net = require('node:net');
 const fs = require('node:fs/promises');
 
 const PORT = 5050;
-const HOSTNAME = '::1';
+const HOSTNAME = '172.31.19.42';
+//const HOSTNAME = '::1';
 
 const server = net.createServer(() => {});
 
